@@ -1,0 +1,44 @@
+-----| PHP 
+
+       Procedural Programming 
+       Functional Programming 
+       Object Oriented Programming 
+
+-----| OOP
+
+       Class
+       Class Properties
+       Class Methods
+       Access Modifiers
+       Constructor 
+       Magic Methods
+       Class Inheritence
+       Static Methods and Properties
+
+-----| PDO
+
+-----| MVC
+
+       MVC = Model View Controller = Software design pattern That seperates application functions into 3 different areas
+       ---
+
+           1 - The Model 
+
+               + used to deal with The data of The application 
+               + Interacts with The database ( INSERT - SELECT - UPDATE - DELETE )
+               + Communicate with The Controller
+
+           2 - The View
+
+               + What The user sees in The browser (UI) usually consists of HTML and CSS
+               + Communicate with The Controller
+               + Can be passed dynamic values from The Controller
+
+           3 - The Controller
+
+               + Receives input from The URL and Forms and processes requests ( GET - POST )
+               + Gets data from The Model
+               + Passes data To The views
+
+       MVC WORKFLOW
+       ------------
