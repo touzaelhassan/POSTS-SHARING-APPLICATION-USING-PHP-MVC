@@ -1,1 +1,20 @@
-# WEB APPLICATION USING PHP - OOP - PDO - MVC
+# WEB APPLICATION ( POST SHARING APPLICATION ) USING PHP - OOP - PDO - MVC
+
+This Project is about building a custom MVC framework using PHP - OOP - PDO and full MVC workflow from scratch and then we will build a WEB APPLICATION ( Post Sharing Application) on top of That MVC framework. we use .htaccess and mod_rewrite for friendly URLs and we have a base controller to load models and views, we also have a custom database library class That uses PDO.
+
+The Application That we build on top of This custom MVC framework have full user authentication ( signup - login - logout ) and access control and include full CRUD functionalities for posts, it also include extra helpers for things like redirecting and flesh messaging.
+
+### 1 - BUILDING MVC FRAMEWORK
+
+       1 - 1 Full MVC workflow
+       1 - 2 .htaccess and mode_rewrite for friendly URLs
+       1 - 3 Base controller to load models and views
+       1 - 4 Custom database library class That uses PDO
+
+### 2 - BUILDING WEB APPLICATION ON TOP OF THE MVC FRAMEWORK
+
+       2 - 1 User authentication ( Signup - Login - Logout )
+       2 - 2 CRUD functionalities posts
+       2 - 3 Helpers for redirecting and flash messaging
+
+### 3 - TECHNOLOGIES : HTML - CSS - PHP - SQL
