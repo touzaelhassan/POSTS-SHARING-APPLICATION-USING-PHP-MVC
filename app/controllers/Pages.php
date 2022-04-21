@@ -8,6 +8,7 @@ class Pages
 
   public function index()
   {
+    echo "The Index Method";
   }
 
   public function about($id)
