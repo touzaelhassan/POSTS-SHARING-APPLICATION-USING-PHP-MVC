@@ -1,4 +1,4 @@
-## POSTS SHARING APP USING PHP - OOP - PDO - MVC
+## POSTS SHARING APPLICATION USING PHP - OOP - PDO - MVC
 
 This Project is about building a custom MVC framework using PHP - OOP - PDO and full MVC workflow from scratch and then we will build a WEB APPLICATION ( Post Sharing Application) on top of That MVC framework. we use .htaccess and mod_rewrite for friendly URLs and we have a base controller to load models and views, we also have a custom database library class That uses PDO.
 
