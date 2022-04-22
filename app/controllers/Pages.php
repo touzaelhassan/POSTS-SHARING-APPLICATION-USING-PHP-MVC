@@ -8,12 +8,13 @@ class Pages extends Controller
 
   public function index()
   {
-    $data = ['title' => 'Welcome !!'];
+    $data = ['title' => 'WELCOME TO THE HOMEPAGE'];
     $this->view('pages/index', $data);
   }
 
   public function about()
   {
-    $this->view('pages/about');
+    $data = ['title' => 'WELCOME TO THE ABOUT PAGE'];
+    $this->view('pages/about', $data);
   }
 }
