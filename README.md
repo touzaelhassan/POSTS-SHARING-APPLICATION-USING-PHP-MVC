@@ -17,7 +17,7 @@ The Application That we build on top of This custom MVC framework have full user
        2 - 2 CRUD functionalities posts
        2 - 3 Helpers for redirecting and flash messaging
 
-### 3 - TECHNOLOGIES : HTML - CSS - JS - PHP - SQL
+### 3 - TECHNOLOGIES : HTML - CSS - JavaScript - PHP - SQL
 
 ![pexels-cottonbro-5053738](https://user-images.githubusercontent.com/59705964/164145559-8edd4cf2-ecaf-4846-9653-3ba650d40455.jpg)
 
