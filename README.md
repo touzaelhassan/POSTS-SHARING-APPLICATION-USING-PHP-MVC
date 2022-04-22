@@ -1,4 +1,4 @@
-# POSTS SHARING APP USING PHP - OOP - PDO - MVC
+## POSTS SHARING APPLICATION USING PHP - OOP - PDO - MVC
 
 ### 1 - PROJECT DESCRIPTION
 
@@ -19,6 +19,6 @@
        2 - 2 CRUD functionalities posts
        2 - 3 Helpers for redirecting and flash messaging
 
-### 4 - TECHNOLOGIES : HTML - CSS - PHP - SQL
+### 4 - TECHNOLOGIES : HTML - CSS - JavaScript - PHP - SQL
 
 ![pexels-cottonbro-5053738](https://user-images.githubusercontent.com/59705964/164145559-8edd4cf2-ecaf-4846-9653-3ba650d40455.jpg)
