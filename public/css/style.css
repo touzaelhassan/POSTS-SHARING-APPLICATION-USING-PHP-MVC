@@ -4,3 +4,8 @@
   font-family: roboto, 'sans-serif';
   box-sizing: border-box;
 }
+
+.home__title {
+  margin: 50px;
+  font-size: 25px;
+}

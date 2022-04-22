@@ -4,12 +4,12 @@ class Pages extends Controller
 {
   public function __construct()
   {
-    $this->postModel = $this->model('Post');
   }
 
   public function index()
   {
-    $data = ['title' => 'WELCOME TO THE HOMEPAGE'];
+    $data = ['title' => 'WELCOME TO THE MVC FRAMEWORK',];
+
     $this->view('pages/index', $data);
   }
 

@@ -15,7 +15,7 @@
 
 ### 3 - BUILDING WEB APPLICATION ON TOP OF THE MVC FRAMEWORK
 
-       2 - 1 User authentication ( Signup - Login - Logout )
+       2 - 1 User authentication ( signup - login - logout )
        2 - 2 CRUD functionalities posts
        2 - 3 Helpers for redirecting and flash messaging
 
