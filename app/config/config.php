@@ -1,5 +1,8 @@
-<?php
+<?php define('DB_HOST', 'localhost'); ?>
+<?php define('DB_NAME', 'share_posts'); ?>
+<?php define('DB_USER', 'root'); ?>
+<?php define('DB_PASSWORD', ''); ?>
 
-define('APPROOT', dirname(dirname(__FILE__)));
-define('URLROOT', 'http://localhost/APPLICATION-USING-PHP-OOP-PDO-MVC');
-define('SITENAME', 'SharePosts');
+<?php define('APPROOT', dirname(dirname(__FILE__))); ?>
+<?php define('URLROOT', 'http://localhost/APPLICATION-USING-PHP-OOP-PDO-MVC'); ?>
+<?php define('SITENAME', 'SharePosts'); ?>
