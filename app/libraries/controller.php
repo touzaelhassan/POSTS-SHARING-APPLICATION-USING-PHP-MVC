@@ -1,4 +1,3 @@
-<!-- The Base Controller => Loads Models and Views -->
 <?php
 
 class Controller

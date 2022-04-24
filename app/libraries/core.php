@@ -1,5 +1,3 @@
-<!-- Application Core Clas => Creates URL and loads core controller ( URL FORMAT = /controller/method/params) -->
-
 <?php
 class Core
 {
@@ -46,3 +44,6 @@ class Core
     }
   }
 }
+?>
+
+<?php $init = new Core(); ?>
