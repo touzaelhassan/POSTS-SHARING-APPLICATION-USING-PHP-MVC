@@ -8,14 +8,20 @@ class Pages extends Controller
 
   public function index()
   {
-    $data = ['title' => 'WELCOME TO THE MVC FRAMEWORK',];
+    $data = [
+      'title' => 'SharePosts',
+      'description' => 'Simple social network built using custom MVC framework'
+    ];
 
     $this->view('pages/index', $data);
   }
 
   public function about()
   {
-    $data = ['title' => 'WELCOME TO THE ABOUT PAGE'];
+    $data = [
+      'title' => 'WELCOME TO THE ABOUT PAGE',
+      'description' => 'Application to share posts with other users'
+    ];
     $this->view('pages/about', $data);
   }
 }
