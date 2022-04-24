@@ -31,7 +31,6 @@ class Users extends Controller
       if (empty($data['user_email'])) {
         $data['user_email_error'] = 'Pleae enter email';
       } else {
-
         if ($this->userModel->get_user_by_email($data['user_email'])) {
           $data['user_email_error'] = 'Email is already taken';
         }
@@ -53,7 +52,15 @@ class Users extends Controller
 
 
       if (empty($data['user_name_error']) && empty($data['user_email_error']) && empty($data['user_password_error']) && empty($data['user_confirm_password_error'])) {
-        echo "Form Data are ready to be sent to the server";
+
+        $data['user_password'] = password_hash($data['user_password'], PASSWORD_DEFAULT);
+
+        if ($this->userModel->register($data)) {
+          redirect('users/login');
+        } else {
+
+          die('Something went wrong');
+        }
       } else {
         $this->view('users/register', $data);
       }
