@@ -16,6 +16,10 @@ class Pages extends Controller
     $this->view('pages/index', $data);
   }
 
+
+
+
+
   public function about()
   {
     $data = [
