@@ -21,4 +21,14 @@ class Posts extends Controller
     ];
     $this->view('posts/index', $data);
   }
+
+  public function add()
+  {
+    $data = [
+      'post_title' => '',
+      'post_body' => ''
+    ];
+
+    $this->view('posts/add', $data);
+  }
 }
