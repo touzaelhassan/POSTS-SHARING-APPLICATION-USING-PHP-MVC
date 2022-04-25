@@ -25,4 +25,19 @@ class Post
 
     return $this->db->result_set();
   }
+
+  public function add_post($data)
+  {
+    $this->db->query('INSERT INTO posts (user_id, post_title, post_body) VALUES (:user_id, :post_title, :post_body)');
+
+    $this->db->bind(':user_id', $data['user_id']);
+    $this->db->bind(':post_title', $data['post_title']);
+    $this->db->bind(':post_body', $data['post_body']);
+
+    if ($this->db->execute()) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
