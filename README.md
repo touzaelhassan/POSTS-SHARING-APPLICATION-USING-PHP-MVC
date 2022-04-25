@@ -1,5 +1,7 @@
 ## POSTS SHARING APPLICATION USING PHP-MYSQL ( OOP - PDO - MVC )
 
+#### http://shareposts.youcodeapps.com
+
 ### 1 - PROJECT DESCRIPTION
 
        This Project is about building a custom MVC framework using PHP - OOP - PDO and full MVC workflow from scratch and then we will build a WEB APPLICATION ( Post Sharing Application) on top of That MVC framework. we use .htaccess and mod_rewrite for friendly URLs and we have a base controller to load models and views, we also have a custom database library class That uses PDO.

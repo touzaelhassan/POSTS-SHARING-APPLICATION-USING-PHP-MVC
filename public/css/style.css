@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+a {
+  color: #000;
+  text-decoration: none;
+}
+
 /* Start Hero Section */
 .hero {
   height: 75vh;
