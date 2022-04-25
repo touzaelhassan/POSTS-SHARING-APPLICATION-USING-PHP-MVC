@@ -4,3 +4,65 @@
   font-family: roboto, 'sans-serif';
   box-sizing: border-box;
 }
+
+/* Start Hero Section */
+.hero {
+  height: 75vh;
+}
+
+.hero__header p {
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+/* End Hero Section */
+
+/* Start About Section */
+.hero.about {
+  height: 75vh;
+}
+/* End About Section */
+
+/* Start Form Section */
+.form__container {
+  height: 81vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.form__btn {
+  display: block;
+  width: 200px;
+  padding: 9px 0;
+  letter-spacing: 1px;
+}
+
+.form__footer__left {
+  text-align: end;
+}
+
+.form__footer__left a {
+  text-align: end;
+  padding-left: 0;
+  padding-right: 0;
+}
+/* End Form Section */
+
+/* Start Footer Section */
+.footer {
+  background-color: #f8f9fa;
+}
+
+.footer p {
+  padding: 25px 0;
+  color: #666;
+  font-size: 14px;
+}
+/* End Footer Section */

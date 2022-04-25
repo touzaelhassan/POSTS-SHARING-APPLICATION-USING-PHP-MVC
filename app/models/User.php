@@ -36,4 +36,18 @@ class User
       return false;
     }
   }
+
+  public function login($user_email, $user_password)
+  {
+    $this->db->query('SELECT * FROM users WHERE user_email = :user_email');
+    $this->db->bind(':user_email', $user_email);
+    $db_user = $this->db->single();
+    $db_user_password = $db_user->user_password;
+
+    if (password_verify($user_password, $db_user_password)) {
+      return $db_user;
+    } else {
+      return false;
+    }
+  }
 }
