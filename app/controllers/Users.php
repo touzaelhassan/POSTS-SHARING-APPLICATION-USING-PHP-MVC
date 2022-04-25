@@ -133,7 +133,7 @@ class Users extends Controller
     $_SESSION["user_id"] = $logged_in_user->user_id;
     $_SESSION["user_name"] = $logged_in_user->user_name;
     $_SESSION["user_email"] = $logged_in_user->user_email;
-    redirect('pages/index');
+    redirect('posts/index');
   }
 
   public function logout()
@@ -143,14 +143,5 @@ class Users extends Controller
     unset($_SESSION["user_email"]);
     session_destroy();
     redirect('users/login');
-  }
-
-  public function is_user_logged_in()
-  {
-    if (isset($_SESSION['user_id'])) {
-      return true;
-    } else {
-      return false;
-    }
   }
 }

@@ -26,4 +26,13 @@ function flash($name = '', $message = '', $class = 'alert alert-succes')
   }
 }
 
+function is_user_logged_in()
+{
+  if (isset($_SESSION['user_id'])) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 ?>
