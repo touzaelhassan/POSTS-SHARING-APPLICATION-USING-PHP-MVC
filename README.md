@@ -1,6 +1,6 @@
 ## POSTS SHARING APPLICATION USING PHP-MYSQL ( OOP - PDO - MVC )
 
-#### http://shareposts.youcodeapps.com
+#### https://shareposts.youcodeapps.com
 
 ### 1 - PROJECT DESCRIPTION
 
