@@ -22,6 +22,21 @@ class Posts extends Controller
     $this->view('posts/index', $data);
   }
 
+
+  public function show($post_id)
+  {
+    $post = $this->postModel->get_post_by_id($post_id);
+    $user_id = $post->user_id;
+    $user = $this->userModel->get_user_by_id($user_id);
+
+    $data = [
+      'post' => $post,
+      'user' => $user
+    ];
+
+    $this->view('posts/show', $data);
+  }
+
   public function add()
   {
     if ($_SERVER["REQUEST_METHOD"] == 'POST') {
@@ -104,18 +119,22 @@ class Posts extends Controller
     }
   }
 
-
-  public function show($post_id)
+  public function delete($post_id)
   {
-    $post = $this->postModel->get_post_by_id($post_id);
-    $user_id = $post->user_id;
-    $user = $this->userModel->get_user_by_id($user_id);
+    if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 
-    $data = [
-      'post' => $post,
-      'user' => $user
-    ];
+      $post = $this->postModel->get_post_by_id($post_id);
+      if ($post->user_id != $_SESSION['user_id']) {
+        redirect('posts');
+      }
 
-    $this->view('posts/show', $data);
+      if ($this->postModel->delete_post($post_id)) {
+        redirect('posts');
+      } else {
+        die('Something went wrong');
+      }
+    } else {
+      redirect('posts');
+    }
   }
 }
