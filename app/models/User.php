@@ -24,6 +24,13 @@ class User
     }
   }
 
+  public function get_user_by_id($user_id)
+  {
+    $this->db->query('SELECT * FROM users WHERE user_id= :user_id');
+    $this->db->bind(':user_id', $user_id);
+    return $this->db->single();
+  }
+
   public function get_user_by_email($user_email)
   {
     $this->db->query('SELECT * FROM users WHERE user_email= :user_email');

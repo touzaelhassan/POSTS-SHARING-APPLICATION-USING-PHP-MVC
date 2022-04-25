@@ -40,4 +40,11 @@ class Post
       return false;
     }
   }
+
+  public function get_post_by_id($post_id)
+  {
+    $this->db->query('SELECT * FROM posts WHERE post_id = :post_id');
+    $this->db->bind(':post_id', $post_id);
+    return $this->db->single();
+  }
 }

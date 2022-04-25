@@ -8,8 +8,8 @@ class Posts extends Controller
     if (!isset($_SESSION['user_id'])) {
       redirect('users/login');
     }
-
     $this->postModel  = $this->model('Post');
+    $this->userModel  = $this->model('User');
   }
 
   public function index()
@@ -58,5 +58,19 @@ class Posts extends Controller
 
       $this->view('posts/add', $data);
     }
+  }
+
+  public function show($post_id)
+  {
+    $post = $this->postModel->get_post_by_id($post_id);
+    $user_id = $post->user_id;
+    $user = $this->userModel->get_user_by_id($user_id);
+
+    $data = [
+      'post' => $post,
+      'user' => $user
+    ];
+
+    $this->view('posts/show', $data);
   }
 }
