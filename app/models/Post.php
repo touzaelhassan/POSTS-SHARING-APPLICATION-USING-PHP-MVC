@@ -8,6 +8,21 @@ class Post
     $this->db = new Database;
   }
 
+  public function add_post($data)
+  {
+    $this->db->query('INSERT INTO posts (user_id, post_title, post_body) VALUES (:user_id, :post_title, :post_body)');
+
+    $this->db->bind(':user_id', $data['user_id']);
+    $this->db->bind(':post_title', $data['post_title']);
+    $this->db->bind(':post_body', $data['post_body']);
+
+    if ($this->db->execute()) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   function get_posts()
   {
 
@@ -26,11 +41,18 @@ class Post
     return $this->db->result_set();
   }
 
-  public function add_post($data)
+  public function get_post_by_id($post_id)
   {
-    $this->db->query('INSERT INTO posts (user_id, post_title, post_body) VALUES (:user_id, :post_title, :post_body)');
+    $this->db->query('SELECT * FROM posts WHERE post_id = :post_id');
+    $this->db->bind(':post_id', $post_id);
+    return $this->db->single();
+  }
 
-    $this->db->bind(':user_id', $data['user_id']);
+  public function update_post($data)
+  {
+    $this->db->query('UPDATE posts SET post_title = :post_title, post_body = :post_body WHERE post_id = :post_id');
+
+    $this->db->bind(':post_id', $data['post_id']);
     $this->db->bind(':post_title', $data['post_title']);
     $this->db->bind(':post_body', $data['post_body']);
 
@@ -39,12 +61,5 @@ class Post
     } else {
       return false;
     }
-  }
-
-  public function get_post_by_id($post_id)
-  {
-    $this->db->query('SELECT * FROM posts WHERE post_id = :post_id');
-    $this->db->bind(':post_id', $post_id);
-    return $this->db->single();
   }
 }
