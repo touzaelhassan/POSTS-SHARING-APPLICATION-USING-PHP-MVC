@@ -12,14 +12,90 @@ a {
 
 /* Start Hero Section */
 .hero {
-  height: 75vh;
+  margin-top: 50px;
 }
 
 .hero__header p {
   font-size: 17px;
   letter-spacing: 1px;
 }
+
+@media screen and (min-width: 768px) {
+  .hero {
+    margin-top: 80px;
+  }
+}
 /* End Hero Section */
+
+/* Start Intro Section */
+.intro-images {
+  margin: 50px 0;
+}
+
+.intro__content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.intro__item {
+  border: 3px solid #eee;
+  padding: 2px;
+}
+
+.intro__item img {
+  width: 100%;
+}
+
+.intro-text {
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.intro__sub__title {
+  margin-bottom: 10px;
+  color: #465a69;
+  font-size: 25px;
+}
+
+.intro__title {
+  text-transform: uppercase;
+}
+
+.intro__btn {
+  display: inline-block;
+  margin-top: 10px;
+  border: 0;
+  border: 2px solid green;
+  padding: 9px 40px;
+  color: #fff;
+  background-color: green;
+  letter-spacing: 1px;
+}
+
+.intro__btn:hover {
+  color: green;
+  background-color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .intro-images {
+    margin: 100px 0;
+  }
+
+  .intro__content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .intro-text {
+    margin: 100px 0;
+  }
+}
+/* End Intro Section */
 
 /* Start About Section */
 .hero.about {
@@ -66,7 +142,7 @@ a {
 }
 
 .footer p {
-  padding: 25px 0;
+  padding: 30px 0;
   color: #666;
   font-size: 14px;
 }
