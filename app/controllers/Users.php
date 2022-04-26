@@ -23,7 +23,6 @@ class Users extends Controller
         'user_confirm_password_error' => '',
       ];
 
-
       if (empty($data['user_name'])) {
         $data['user_name_error'] = 'Pleae enter name';
       }
@@ -50,13 +49,12 @@ class Users extends Controller
         }
       }
 
-
       if (empty($data['user_name_error']) && empty($data['user_email_error']) && empty($data['user_password_error']) && empty($data['user_confirm_password_error'])) {
 
         $data['user_password'] = password_hash($data['user_password'], PASSWORD_DEFAULT);
 
         if ($this->userModel->register($data)) {
-          redirect('users/login');
+          $this->view('users/signup-success', []);
         } else {
 
           die('Something went wrong');
@@ -102,8 +100,6 @@ class Users extends Controller
         $data['user_password_error'] = 'Pleae enter password';
       }
 
-
-
       if (empty($data['user_email_error']) && empty($data['user_password_error'])) {
         $logged_in_user = $this->userModel->login($data['user_email'], $data['user_password']);
         if ($logged_in_user) {
@@ -133,7 +129,7 @@ class Users extends Controller
     $_SESSION["user_id"] = $logged_in_user->user_id;
     $_SESSION["user_name"] = $logged_in_user->user_name;
     $_SESSION["user_email"] = $logged_in_user->user_email;
-    redirect('posts/index');
+    $this->view('users/login-success', []);
   }
 
   public function logout()
@@ -142,6 +138,6 @@ class Users extends Controller
     unset($_SESSION["user_name"]);
     unset($_SESSION["user_email"]);
     session_destroy();
-    redirect('users/login');
+    $this->view('users/logout-confirm', []);
   }
 }
